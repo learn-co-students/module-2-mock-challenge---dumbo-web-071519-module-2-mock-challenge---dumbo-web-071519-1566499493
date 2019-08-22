@@ -1,0 +1,19 @@
+<h1>This is <%= @power.name %>'s Show Page</h1>
+
+<p>
+ <strong> Name: </strong>  <%= @power.name %>
+</p>
+
+<p>
+  <strong> description: </strong><%= @power.description%>
+</p>
+
+<br>
+
+<%= link_to "See All She - Heros",heroines_path %>
+<br>
+<%= link_to "Create A New Heroine",new_heroine_path %>
+
+<br>
+
+<%= link_to "See All Powers",powers_path %>
