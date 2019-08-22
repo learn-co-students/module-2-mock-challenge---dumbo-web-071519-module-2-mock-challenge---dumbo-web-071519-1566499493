@@ -1,5 +1,11 @@
 <h2>All Heroines</h2>
 
+//was fiddling search filter when time ran out
+<%= form_tag(heroines_path) do %>
+  Power <%= text_field_tag :power %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
