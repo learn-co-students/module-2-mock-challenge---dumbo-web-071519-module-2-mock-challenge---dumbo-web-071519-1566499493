@@ -5,8 +5,10 @@
     <li>
       <%= power.name %>
       <br>
-      Description: <%= power.description %>
+      <%= link_to "Power Info", power %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<p><%= link_to 'Back to Heroines', heroines_path %></p>
