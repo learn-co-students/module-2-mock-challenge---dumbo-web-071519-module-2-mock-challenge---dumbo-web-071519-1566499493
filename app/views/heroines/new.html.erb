@@ -1,0 +1,17 @@
+<h1>Create a new Heroine!</h1>
+
+
+<%= form_for(@heroine) do |f| %>
+  <%= f.label :name ,"Name" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :super_name, "Super Name" %>
+  <%= f.text_field :super_name %>
+        
+    <%= f.collection_select :power_id, Power.all, :id, :name  %>
+<%= f.submit "Create" %>
+<% end %>
+<br>
+<%= link_to "See All She Heros",heroines_path %>
+<br>
+<%= link_to "See Powers",powers_path %>
