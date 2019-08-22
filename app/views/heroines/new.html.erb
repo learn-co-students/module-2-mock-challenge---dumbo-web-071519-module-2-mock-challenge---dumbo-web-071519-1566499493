@@ -1,0 +1,20 @@
+
+<h3>Create a Heroine</h3>
+
+
+<%= form_with model: @heroine do |form| %>
+  <%= form.text_field :super_name, placeholder: "Supername" %>
+  <%= form.text_field :name, placeholder: "name" %>
+
+    <p> What Power? </p>
+  <%= form.collection_select :power_id, Power.all, :id, :name %>
+
+  <% #I believe this is creating a new power_id, too, although none of the other attributes are being filled in. I am trying to edit this in the power controller
+
+  #I need to reset the ids! %>
+
+  <%= form.submit %>
+
+
+
+<% end %>
